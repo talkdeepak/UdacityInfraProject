@@ -1,0 +1,39 @@
+Launch configuration and other consideration
+1. Use instance type t2.medium
+2. Since you will be downloading the application archive from an S3 Bucket, 
+    you'll need to create an IAM Role that allows your instances to use the S3 Service.
+ 
+ 3.  Keep http Port: 80 open 
+ 
+
+ --------------
+
+ My understanding is the following:
+
+--->For network:
+
+1) First, create a VPC
+
+2) Next, 1 public subnet per availabilty zone (actually do we need a public subnet?)
+
+3) 1 private subnet per availability zone (servers will be created here, 2 per subnet)
+
+4) natgateway, route table
+
+---->For servers:
+
+1) security group for load balancer
+
+2) security group for web server
+
+3) InstanceProfile
+
+3) a LaunchConfiguration with the instanceprofile attached
+
+4) autoscaling group for the private subnet instances
+
+5) a loadbalancer
+
+6) a listener for the load balancer
+
+7) health check
