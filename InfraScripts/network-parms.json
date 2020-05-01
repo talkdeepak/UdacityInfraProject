@@ -1,11 +1,11 @@
 [    
 	{
 		"ParameterKey":"ResourceTitle",
-		"ParameterValue": "Udagram"
+		"ParameterValue": "UdagramProj"
 	},
 	{
 		"ParameterKey": "EnvironmentName",
-		"ParameterValue": "UdacityProject"
+		"ParameterValue": "UdagramProj"
 	},
 	{
 		"ParameterKey": "VpcCIDR",
